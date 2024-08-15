@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import { CiHeart, CiMail } from "react-icons/ci";
 import { MdCompareArrows } from "react-icons/md";
-import { FaChartBar } from "react-icons/fa";
+import { FaChartBar, FaStar } from "react-icons/fa";
 import { FaTruckFast, FaXTwitter } from "react-icons/fa6";
 import Amazon from "../../assets/images/amazon.jpeg";
 import Apple from "../../assets/images/apay.jpeg";
@@ -26,6 +26,10 @@ import Paypal from "../../assets/images/pay.jpeg";
 import Visa from "../../assets/images/visa.jpeg";
 import FeaturedCard from "../../components/FeaturedCard";
 import NewArrivalsCard from "../../components/NewArrivalsCard";
+import Customer from "../../assets/images/customer.jpg";
+import Customer2 from "../../assets/images/customer2.jpg";
+import Customer3 from "../../assets/images/customer3.jpg";
+
 
 export default function SingleProduct() {
   const [activeTab, setActiveTab] = useState("description");
@@ -49,17 +53,105 @@ export default function SingleProduct() {
               mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum
               nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras
               id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam...
+              Praesent congue erat at massa. Sed cursus turpis vitae tortor.
+              Donec posuere vulputate arcu. Phasellus accumsan cursus velit.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue,
+              elit erat euismod orci, ac placerat dolor lectus quis orci.
+              Phasellus consectetuer vestibulum elit. Aenean tellus metus,
+              bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla
+              pede sit amet augue. In turpis. Pellentesque posuere.
             </p>
           </div>
         );
       case "reviews":
         return (
-          <div className="p-4">
-            <p className="text-gray-700">
-              This is where reviews would be displayed. User feedback and
-              ratings can be showcased here.
-            </p>
-          </div>
+          <>
+            <div className="p-4">
+              <div className="flex">
+                <img
+                  src={Customer}
+                  className="w-20 h-20 object-cover rounded-[50%]"
+                  alt=""
+                />
+                <div className="m-3">
+                  <h1 className="text-xl text-center">Lorem</h1>
+                  <span className="flex text-yellow-500">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </span>
+                </div>
+              </div>
+              <div className="mt-5">
+                <p className="">
+                  {" "}
+                  ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                  nulla porro nesciunt commodi adipisci beatae id soluta
+                  temporibus quo! Nulla libero debitis quaerat hic! Quasi
+                  temporibus nam sunt eveniet nostrum.
+                </p>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex">
+                <img
+                  src={Customer2}
+                  className="w-20 h-20 object-cover rounded-[50%]"
+                  alt=""
+                />
+                <div className="m-3">
+                  <h1 className="text-xl text-center">Doler</h1>
+                  <span className="flex text-yellow-500">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </span>
+                </div>
+              </div>
+              <div className="mt-5">
+                <p className="">
+                  {" "}
+                  ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                  nulla porro nesciunt commodi adipisci beatae id soluta
+                  temporibus quo! Nulla libero debitis quaerat hic! Quasi
+                  temporibus nam sunt eveniet nostrum.
+                </p>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex">
+                <img
+                  src={Customer3}
+                  className="w-20 h-20 object-cover rounded-[50%]"
+                  alt=""
+                />
+                <div className="m-3">
+                  <h1 className="text-xl text-center">Pedro</h1>
+                  <span className="flex text-yellow-500">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </span>
+                </div>
+              </div>
+              <div className="mt-5">
+                <p className="">
+                  {" "}
+                  ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                  nulla porro nesciunt commodi adipisci beatae id soluta
+                  temporibus quo! Nulla libero debitis quaerat hic! Quasi
+                  temporibus nam sunt eveniet nostrum.
+                </p>
+              </div>
+            </div>
+          </>
         );
       case "shipping":
         return (

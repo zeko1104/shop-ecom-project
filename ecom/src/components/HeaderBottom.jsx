@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
-import { IoSearch } from "react-icons/io5";
+import { IoSearch, IoClose } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import Container from "../components/Container";
@@ -10,6 +10,8 @@ import Cart from "./Cart";
 export default function HeaderBottom() {
   const [cartVisible, setCartVisible] = useState(false);
   const [userMenuVisible, setUserMenuVisible] = useState(false);
+  const [searchVisible, setSearchVisible] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toggleCartVisibility = () => {
     setCartVisible(!cartVisible);
@@ -19,11 +21,19 @@ export default function HeaderBottom() {
     setUserMenuVisible(isVisible);
   };
 
+  const toggleSearchVisibility = () => {
+    setSearchVisible(!searchVisible);
+  };
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
     <div className="p-5">
       <Container>
         <div className="flex justify-around items-center">
-          <Link to='/'>
+          <Link to="/">
             <div className="flex items-center">
               <h1 className="text-4xl font-bold text-blue-600">SHOP</h1>
             </div>
@@ -45,7 +55,28 @@ export default function HeaderBottom() {
                 AZN
               </option>
             </select>
-            <IoSearch className="text-gray-500 text-2xl cursor-pointer" />
+            <div className="flex items-center gap-2">
+              {searchVisible ? (
+                <>
+                  <input
+                    type="text"
+                    className="border-b border-gray-500 bg-transparent text-gray-700 outline-none"
+                    placeholder="Search..."
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                  />
+                  <IoClose
+                    className="text-gray-500 text-2xl cursor-pointer"
+                    onClick={toggleSearchVisibility}
+                  />
+                </>
+              ) : (
+                <IoSearch
+                  className="text-gray-500 text-2xl cursor-pointer"
+                  onClick={toggleSearchVisibility}
+                />
+              )}
+            </div>
             <div
               className="relative flex items-center"
               onMouseEnter={() => toggleUserMenuVisibility(true)}
@@ -54,13 +85,22 @@ export default function HeaderBottom() {
               <FaRegUser className="text-gray-500 text-2xl cursor-pointer" />
               {userMenuVisible && (
                 <div className="absolute top-full mt-2 right-0 bg-white border border-gray-200 rounded shadow-lg p-2">
-                  <Link to="/account" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  <Link
+                    to="/account"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
                     My Account
                   </Link>
-                  <Link to="/wishlist" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  <Link
+                    to="/wishlist"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
                     Wishlist
                   </Link>
-                  <Link to="/login" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                  <Link
+                    to="/login"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
                     Login
                   </Link>
                 </div>
