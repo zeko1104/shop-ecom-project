@@ -30,7 +30,6 @@ import Customer from "../../assets/images/customer.jpg";
 import Customer2 from "../../assets/images/customer2.jpg";
 import Customer3 from "../../assets/images/customer3.jpg";
 
-
 export default function SingleProduct() {
   const [activeTab, setActiveTab] = useState("description");
 

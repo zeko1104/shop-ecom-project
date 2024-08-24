@@ -18,6 +18,7 @@ export default function Card() {
     fetchData();
   }, []);
 
+  
   return (
     <div className="flex flex-wrap justify-center gap-6">
       {products.map((product) => (
@@ -33,7 +34,7 @@ export default function Card() {
             />
             <img
               className="h-full w-full object-cover rounded-xl hidden group-hover:block"
-              src={product.secondimage}
+              src={product.image}
               alt={product.name}
             />
             {product.discountPrice && (
@@ -51,7 +52,7 @@ export default function Card() {
           </div>
           <div className="absolute inset-0 flex items-center justify-center  opacity-0 group-hover:opacity-100 transition-opacity">
             <div className="space-x-4">
-              <Link to='/singleproduct'> 
+              <Link to={`/product`}>
                 <button className="hover:bg-blue-600 hover:text-white  text-black bg-white rounded-lg text-xl p-2">
                   <FaRegEye />
                 </button>
