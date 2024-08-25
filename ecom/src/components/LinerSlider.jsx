@@ -4,6 +4,7 @@ import Container from "../components/Container";
 function LinerSlider() {
   const settings = {
     dots: false,
+    arrows:false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,

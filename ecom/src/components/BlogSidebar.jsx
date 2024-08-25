@@ -87,16 +87,16 @@ export default function BlogSidebar() {
           <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-blue-600 hover:text-white">
             <FaFacebookF className="text-lg" />
           </div>
-          <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-blue-600 hover:text-white">
+          <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-blue-400 hover:text-white">
             <FaXTwitter className="text-lg" />
           </div>
-          <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-blue-600 hover:text-white">
+          <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-red-600 hover:text-white">
             <FaYoutube className="text-lg" />
           </div>
-          <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-blue-600 hover:text-white">
+          <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-pink-600 hover:text-white">
             <FaInstagram className="text-lg" />
           </div>
-          <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-blue-600 hover:text-white">
+          <div className="w-52 h-10 bg-primary text-black flex items-center justify-center rounded-md cursor-pointer hover:bg-black hover:text-white">
             <FaTiktok className="text-lg" />
           </div>
         </div>

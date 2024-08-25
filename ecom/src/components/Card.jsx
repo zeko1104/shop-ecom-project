@@ -35,7 +35,7 @@ export default function Card() {
             />
             <img
               className="h-full w-full object-cover rounded-xl hidden group-hover:block"
-              src={product.image}
+              src={product.secondimage}
               alt={product.name}
             />
             {product.discountPrice && (

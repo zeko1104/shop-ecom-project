@@ -9,6 +9,7 @@ import Slide3 from "../assets/images/slide3.png";
 export default function SimpleSlider() {
   var settings = {
     dots: true,
+    arrows:false,
     infinite: true,
     speed: 500,
     autoplay: true,
