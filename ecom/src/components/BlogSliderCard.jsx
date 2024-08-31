@@ -1,8 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { blogData } from '../data/data.js';
+import { blogData } from "../data/data.js";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function BlogSliderCard() {
   const [blogs, setBlogs] = useState([]);
@@ -31,18 +32,20 @@ export default function BlogSliderCard() {
           <div key={blog.id} className="p-4">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="overflow-hidden">
-                <img 
-                  src={blog.img} 
-                  alt="" 
-                  className="cursor-pointer w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105" 
+                <img
+                  src={blog.img}
+                  alt=""
+                  className="cursor-pointer w-full h-48 object-cover transform transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <div className="p-4">
                 <p className="text-gray-500 text-sm mb-2">{blog.date}</p>
                 <h2 className="text-xl font-semibold mb-4">{blog.title}</h2>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
-                  Read More
-                </button>
+                <Link to='/blogs/news'>
+                  <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
+                    Read More
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

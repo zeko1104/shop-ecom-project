@@ -10,6 +10,7 @@ import ModalPopup from "./components/ModalPopup";
 import SingleProduct from "./pages/Single-Product/SingleProduct";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import SingleBlog from "./pages/Single-Blog/SingleBlog";
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/product" element={<SingleProduct/>} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/blogs/news" element={<SingleBlog/>}/>
       </Routes>
       <Footer />
     </div>
